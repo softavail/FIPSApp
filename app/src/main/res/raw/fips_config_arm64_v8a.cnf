@@ -1,0 +1,52 @@
+openssl_conf = openssl_init
+
+[openssl_init]
+providers = provider_sect
+
+[provider_sect]
+#default = default_sect
+fips = fips_sect
+#base = base_sect
+
+[default_sect]
+activate = 1
+
+[base_sect]
+activate = 1
+
+[algorithm_sect]
+default_properties = "fips=yes"
+
+[fips_sect]
+activate = 1
+install-version = 1
+conditional-errors = 1
+security-checks = 1
+module-mac = 5B:67:F9:0D:13:BB:CA:12:EF:CF:38:B2:30:44:85:A2:8C:83:99:0E:83:F9:58:C9:DC:8B:03:A4:0F:8F:A0:42
+tls1-prf-ems-check = 1
+no-short-mac = 1
+drbg-no-trunc-md = 1
+signature-digest-check = 1
+dsa-sign-disabled = 1
+hkdf-digest-check = 1
+tls13-kdf-digest-check = 1
+tls1-prf-digest-check = 1
+sshkdf-digest-check = 1
+sskdf-digest-check = 1
+x963kdf-digest-check = 1
+tdes-encrypt-disabled = 1
+rsa-pkcs15-pad-disabled = 1
+rsa-pss-saltlen-check = 1
+rsa-sign-x931-pad-disabled = 1
+hkdf-key-check = 1
+kbkdf-key-check = 1
+tls13-kdf-key-check = 1
+tls1-prf-key-check = 1
+sshkdf-key-check = 1
+sskdf-key-check = 1
+x963kdf-key-check = 1
+x942kdf-key-check = 1
+pbkdf2-lower-bound-check = 1
+ecdh-cofactor-check = 1
+hmac-key-check = 1
+kmac-key-check = 1
