@@ -22,11 +22,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private EditText urlInput;
-    private EditText usernameInput;
-    private EditText passwordInput;
     private EditText messageInput;
     private TextView resultText;
-    private Button loginButton;
+    private Button connectButton;
     private Button digestButton;
     private ExecutorService executor;
 
@@ -99,11 +97,9 @@ public class MainActivity extends AppCompatActivity {
         executor = Executors.newSingleThreadExecutor();
 
         urlInput = findViewById(R.id.urlInput);
-        usernameInput = findViewById(R.id.usernameInput);
-        passwordInput = findViewById(R.id.passwordInput);
         messageInput = findViewById(R.id.messageInput);
         resultText = findViewById(R.id.resultText);
-        loginButton = findViewById(R.id.loginButton);
+        connectButton = findViewById(R.id.loginButton);
         digestButton = findViewById(R.id.digestButton);
 
         // Initialize FIPS mode
@@ -139,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
             });
         });
 
-        loginButton.setOnClickListener(v -> {
+        connectButton.setOnClickListener(v -> {
             String url = urlInput.getText().toString();
 
             if (url.isEmpty()) {

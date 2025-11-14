@@ -43,41 +43,25 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="HTTPS Login with Digest Auth"
+            android:layout_marginTop="24dp"
+            android:text="HTTPS GET"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginTop="24dp"/>
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/urlInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="https://example.com/login"
-            android:inputType="textUri"
-            android:layout_marginTop="8dp"/>
-
-        <EditText
-            android:id="@+id/usernameInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Username"
-            android:inputType="text"
-            android:layout_marginTop="8dp"/>
-
-        <EditText
-            android:id="@+id/passwordInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="8dp"
+            android:hint="https://example.com"
+            android:inputType="textUri" />
 
         <Button
             android:id="@+id/loginButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Perform Login"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="8dp"
+            android:text="Connect" />
 
         <TextView
             android:layout_width="match_parent"
