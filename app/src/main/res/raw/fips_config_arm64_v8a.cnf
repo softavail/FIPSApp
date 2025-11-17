@@ -9,16 +9,18 @@ fips = fips_sect
 #base = base_sect
 
 [default_sect]
-activate = 1
+activate = 0
 
 [base_sect]
 activate = 1
+default_properties = "fips=yes"
 
 [algorithm_sect]
 default_properties = "fips=yes"
 
 [fips_sect]
 activate = 1
+default_properties = "fips=yes"
 install-version = 1
 conditional-errors = 1
 security-checks = 1
