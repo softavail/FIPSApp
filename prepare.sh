@@ -4,10 +4,10 @@ CURRENT_PATH=`pwd`
 DEST_PREBUILT_DIR="${CURRENT_PATH}/prebuilt"
 DEST_DIR_NAME="arm64-v8a"
 DEST_DIR="${DEST_PREBUILT_DIR}/$DEST_DIR_NAME"
-BINARY_ARCHIVE_NAME="android-arm64-v8a-bin.tar.gz"
-DOWNLOAD_LINK_FILE_ID="1dbhvEcToRnRd_vPCntoJ_fbzV6eS2A7n"
+BINARY_ARCHIVE_NAME="android-arm64-v8a-bin2.tar.gz"
+DOWNLOAD_LINK_FILE_ID="1Vk_D-ekaM7DlBF74rK1oJ8MlX6VW8gty"
+#"1dbhvEcToRnRd_vPCntoJ_fbzV6eS2A7n"
 APP_RES_RAW_FOLDER="${CURRENT_PATH}/app/src/main/res/raw"
-
 
 gdrive_download()
 {
@@ -40,7 +40,8 @@ download()
 
 copy_bin_to_res_raw()
 {
-    cp -f "$DEST_DIR/fips.so" "${APP_RES_RAW_FOLDER}/fips_module_arm64_v8a.so"
+    cp -f "${DEST_DIR}/fips.so" "${APP_RES_RAW_FOLDER}/fips_module_arm64_v8a.so"
+    cp -f "${DEST_DIR}/openssl.cnf"  "${APP_RES_RAW_FOLDER}/fips_config_arm64_v8a.cnf"
 }
 
 prepare()
@@ -57,8 +58,8 @@ prepare()
        echo "Cannot find $DEST_DIR - downloading it ..."
        
        download
-       mkdir -p "$DEST_DIR"
-       tar -zxvf "${BINARY_ARCHIVE_NAME}"
+       #mkdir -p "$DEST_DIR"
+       tar -zxvf "${BINARY_ARCHIVE_NAME}" -C ${DEST_PREBUILT_DIR}
    else
        echo "Already prepared ... - nothing to do anymore!"
    fi
@@ -68,8 +69,8 @@ prepare()
 
 prepare
 
-   cd ${CURRENT_PATH}
+cd ${CURRENT_PATH}
 
-   copy_bin_to_res_raw
+copy_bin_to_res_raw
 
 cd ${CURRENT_PATH}
