@@ -24,7 +24,7 @@ default_properties = "fips=yes"
 install-version = 1
 conditional-errors = 1
 security-checks = 1
-module-mac = 5B:67:F9:0D:13:BB:CA:12:EF:CF:38:B2:30:44:85:A2:8C:83:99:0E:83:F9:58:C9:DC:8B:03:A4:0F:8F:A0:42
+module-mac = ED:2C:4A:9A:FA:7B:2F:86:9B:8E:2A:23:4E:24:14:79:6E:36:86:23:E4:B8:BE:09:51:D9:C8:23:46:14:9E:61
 tls1-prf-ems-check = 1
 no-short-mac = 1
 drbg-no-trunc-md = 1
